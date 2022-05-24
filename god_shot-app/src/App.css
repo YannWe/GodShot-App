@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 67.5%;
+  color: white;
+}
+
+body {
+  background-color: rgba(77, 44, 3, 0.718);
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  margin: 10px;
+}
+
+nav {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.navigation {
+  border-radius: 10px;
+  background-color: rgba(148, 148, 131, 0.267);
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.515);
+}
+
+.navigation > img {
+  filter: invert(0.7);
+}
+
+.activeNavigation {
+  border-radius: 10px;
+  background-color: beige;
+  padding: 12px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: start;
+}
+
+label {
+  width: 300px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 1fr 1fr;
+  align-items: center;
+  font-size: 12.5px;
+}
+
+section {
+  margin-top: 20px;
+}
+
+.shotSection {
+  margin-left: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 20px 1fr 1fr;
+}
+
+input,
+select {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.152);
+  width: 200px;
+  height: 30px;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.shotSection > label {
+  width: 180px;
+}
+
+.shotInput {
+  width: 50px;
+  margin-left: 10px;
+}
+.shotHeader {
+  grid-column: 1 / 1;
+}
+.coffeeIn {
+  grid-column: 1 / 2;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+.submitButton {
+  width: 100px;
+  margin-top: 20px;
+  margin-left: 260px;
+}
+
+.submitButton:active {
+  background-color: white;
+  color: black;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* input::-webkit-autofill, input:autofill {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.152);
+  width: 200px;
+  height: 30px;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+} */
+
+.shotResults {
+  border-radius: 10px;
+  background-color: rgba(148, 148, 131, 0.267);
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.515);
+}
