@@ -12,7 +12,8 @@ import equipmentImg from "./img/icons8-coffee-machine-78.png";
 import "./App.css";
 
 function App() {
-  const initialInputsArray = localStorage.getItem("inputsArray") || [];
+  const initialInputsArray =
+    JSON.parse(localStorage.getItem("inputsArray")) || [];
   const [inputsArray, setInputsArray] = React.useState(initialInputsArray);
 
   return (

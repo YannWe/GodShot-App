@@ -127,8 +127,8 @@ function PullAShot({inputsArray, setInputsArray}) {
           <h3>Result</h3>
           <label className="extraction">
             {" "}
-            Extraction
-            <select onChange={handleChange} name="extraction" value={selectOption}>
+            Extraction (taste)
+            <select onChange={handleChange} name="extraction" >
               <option value="under extracted">under extracted</option>
               <option value="balanced">balanced</option>
               <option value="over extracted">over extracted</option>
@@ -136,7 +136,7 @@ function PullAShot({inputsArray, setInputsArray}) {
           </label>
           <label>
             {" "}
-            Details:
+            Taste Profile
             <input
               onChange={handleChange}
               className="detailsInput"
