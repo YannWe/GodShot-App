@@ -1,5 +1,8 @@
 # GodShot-App
 **Espresso Log App**
+**V2**
+
+V2 is refactored and improved for my own use via a raspberry pi and a 4" monitor stuck to a wall above my espresso machine. Below GodShot-App Mission Statement was for the frontend part of a webdev course.
 
 ## Mission Statement
 I want espresso enthusiast to be able achieve their **God Shot** by tracking & comparing the result of their shots over time. 
