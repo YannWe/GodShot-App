@@ -4,8 +4,8 @@
 **Version 2**
 
 V2 is refactored and improved for my own use via a raspberry pi and a 4" monitor stuck to a wall above my espresso machine (guess i'll add pictures when its setup). Below GodShot-App Mission Statement was for the frontend part of a webdev course but technically still semi-relevant. 
-V2 will simply be there record and house my own shots, set favourite shot setup (grind size and such) per type of bean. Might add additional features at a later time. 
-
+V2 will simply record and house my own shots, set favourite shot setup (grind size and such) per type of bean. Might add additional features at a later time. 
+BACKEND can be found in this repo: ...
 
 **V1 README - semi-deprecated**
 ## Mission Statement
