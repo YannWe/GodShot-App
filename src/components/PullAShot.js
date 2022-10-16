@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {Box, Typography, } from '@mui/material';
 
 
 function PullAShot({inputsArray, setInputsArray}) {
@@ -46,8 +47,8 @@ function PullAShot({inputsArray, setInputsArray}) {
     } */
 
   return (
-    <div className="PullAShot">
-      <h2>Pull A Shot</h2>
+    <Box sx={{ width: '100%', maxWidth: 500 }}>
+      <Typography variant ="h5" gutterBottom >Pull A Shot</Typography>
 
       <form onSubmit={handleSubmit}>
         <section>
@@ -148,7 +149,7 @@ function PullAShot({inputsArray, setInputsArray}) {
         </section>
         <input className="submitButton" type="submit" value="Save Shot" />
       </form>
-    </div>
+    </Box>
   );
 }
 

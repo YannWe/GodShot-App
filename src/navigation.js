@@ -1,77 +1,63 @@
 import React from "react";
-import { useState } from "react";
-import { Box, BottomNavigation, BottomNavigationAction } from "@mui/material"
-
-// component import
-import Dashboard from "./components/Dashboard";
-import PullAShot from "./components/PullAShot";
-import Coffees from "./components/Coffees";
-import Equipment from "./components/Equipment";
-import ShotOverview from "./components/ShotOverview";
-
-
+import { Box, AppBar, Toolbar, Container, Button } from "@mui/material"
+import CoffeeIcon from '@mui/icons-material/Coffee';
+import { useNavigate } from "react-router-dom";
 
 function Navigation() {
-  const [value, setValue] = useState(0);
+const navigate = useNavigate();
+
 
   return (
-    <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>
-      <BottomNavigation 
-      showLabels
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-    >
-          <BottomNavigationAction label="Dashboard" />
-          <BottomNavigationAction label="New Shot" />
-          <BottomNavigationAction label="Coffees" />
-          <BottomNavigationAction label="Equipment" />
-
-      {/* <nav>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "activeNavigation" : "navigation"
-            }
-            to="/Dashboard"
-          >
-            <img src={cupImg} alt="dashboard" />
-            <p>Dashboard</p>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "activeNavigation" : "navigation"
-            }
-            to="PullAShot"
-          >
-            <img src={espressoImg} alt="pull a shot" />
-            <p>Pull A Shot</p>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "activeNavigation" : "navigation"
-            }
-            to="Equipment"
-          >
-            <img src={equipmentImg} alt="equipment" />
-            <p>Equipment</p>
-          </NavLink>
-          <NavLink
-            className={({ isActive }) =>
-              isActive ? "activeNavigation" : "navigation"
-            }
-            to="Coffees"
-          >
-            <img src={beansImg} alt="Coffees" />
-            <p>Coffees</p>
-          </NavLink>}
-        </nav> */}
-        </ BottomNavigation>
-    </Box>
-
+    <React.Fragment>
+    <AppBar position="fixed" sx={{
+      backgroundColor: '#4d2c03'
+    }}>
+      <Container>
+        <Toolbar>
+        <Box>
+          <CoffeeIcon sx={{
+            mr: 10,
+          }} />
+          </ Box>
+          <Box sx={{ flexGrow: 1, }}>
+            <Button
+            onClick={() => navigate("/Dashboard")}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              
+              Dashboard
+            </Button>
+          </Box>
+          <Box sx={{ flexGrow: 1, }}>
+            <Button
+              onClick={() => navigate("/PullAShot")}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              New Shot
+            </Button>
+          </Box>
+          <Box sx={{ flexGrow: 1 }}>
+            <Button
+              onClick={() => navigate("/Coffees")}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Coffees
+            </Button>
+          </Box>
+          <Box sx={{ flexGrow: 1, }}>
+            <Button
+              onClick={() => navigate("/Equipment")}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+            >
+              Equipment
+            </Button>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+    <Toolbar />
+    </React.Fragment>
   );
-}
+};
 
 export default Navigation;
-
-

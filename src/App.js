@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { NavLink, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import "./App.css";
 
 import Navigation from "./navigation"
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Espresso Shot Archive</h1>
+      <Navigation />
       <Routes>
         <Route path="/">
           <Route
@@ -37,7 +37,7 @@ function App() {
           <Route path="/Coffees" element={<Coffees />} />
         </Route>
       </Routes>
-      <Navigation />
+      
       <Outlet />
     </div>
   );
