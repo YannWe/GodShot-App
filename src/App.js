@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>It's God Shot Time</h1>
+      <h1>Espresso Shot Archive</h1>
       <Routes>
         <Route path="/">
           <Route

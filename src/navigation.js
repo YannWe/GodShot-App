@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Box, Sheet, Tabs, TabList, Tab, ListItemDecorator } from "@mui/joy";
-import { DashboardIcon, EquipmentIcon, PullAShotIcon, BeansIcon } from "./img/icons";
+import { Box, BottomNavigation, BottomNavigationAction } from "@mui/material"
 
 // component import
 import Dashboard from "./components/Dashboard";
@@ -13,29 +12,22 @@ import ShotOverview from "./components/ShotOverview";
 
 
 function Navigation() {
+  const [value, setValue] = useState(0);
 
-  const [index, setIndex] = useState(1);
   return (
     <Box sx={{ display: 'flex', gap: 2, flexDirection: 'column' }}>
-      <Tabs defaultValue={0} aria-label="Navigation tabs" value={index}
-        onChange={(event, value) => setIndex(value)}>
-        <TabList variant="plain">
-          <Tab orientation="vertical" variant={index === 0 ? 'solid' : 'plain'}>
-            <ListItemDecorator>
-              <DashboardIcon />
-            </ListItemDecorator>
-            Dashboard</Tab>
-          <Tab orientation="vertical" variant={index === 1 ? 'solid' : 'plain'}
-          >
-            <ListItemDecorator>
-              <PullAShotIcon />
-            </ListItemDecorator>
-            New Shot</Tab>
-          <Tab orientation="vertical" variant={index === 2 ? 'solid' : 'plain'}>Shot Overview</Tab>
-          <Tab orientation="vertical" variant={index === 3 ? 'solid' : 'plain'}>Coffees</Tab>
-          <Tab orientation="vertical" variant={index === 4 ? 'solid' : 'plain'}>Equipment</Tab>
-        </TabList>
-      </Tabs>
+      <BottomNavigation 
+      showLabels
+      value={value}
+      onChange={(event, newValue) => {
+        setValue(newValue);
+      }}
+    >
+          <BottomNavigationAction label="Dashboard" />
+          <BottomNavigationAction label="New Shot" />
+          <BottomNavigationAction label="Coffees" />
+          <BottomNavigationAction label="Equipment" />
+
       {/* <nav>
           <NavLink
             className={({ isActive }) =>
@@ -74,6 +66,7 @@ function Navigation() {
             <p>Coffees</p>
           </NavLink>}
         </nav> */}
+        </ BottomNavigation>
     </Box>
 
   );
