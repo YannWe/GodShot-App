@@ -1,4 +1,4 @@
-Being refactored with Material-UI (WIP)
+Being refactored with Material-UI (WIP) ---> see refactor-mui branch
 # GodShot-App
 **Espresso Log App**
 
