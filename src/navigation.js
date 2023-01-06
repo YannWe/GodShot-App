@@ -15,7 +15,7 @@ const navigate = useNavigate();
       <Container>
         <Toolbar>
         <Box>
-          <CoffeeIcon sx={{
+          <CoffeeIcon fontSize="large" sx={{
             mr: 10,
           }} />
           </ Box>
