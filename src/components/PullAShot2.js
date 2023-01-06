@@ -4,28 +4,7 @@ import {Box, Typography, } from '@mui/material';
 
 
 function PullAShot({inputsArray, setInputsArray}) {
-  /*     const initialInputs = localStorage.getItem("inputs") || null; */
   
-  const [inputs, setInputs] = useState({});
-  const [selectOption] = useState("Pick Extraction level")
-  const BackToDashboard = useNavigate();
-
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await setInputsArray([...inputsArray, inputs]);
-    localStorage.setItem("inputs", JSON.stringify(inputs));
-    localStorage.setItem("inputsArray", JSON.stringify(inputsArray));
-
-    BackToDashboard("/Dashboard");
-    /* postForm(); */
-  };
-
   return (
     <Box sx={{ width: '100%', maxWidth: 500 }}>
       <Typography variant ="h5" gutterBottom >Pull A Shot</Typography>
